@@ -1,0 +1,1993 @@
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+    --cream: #fff9dc;
+    --cream-light: #fffdf1;
+    --green: #568c1b;
+    --green-dark: #315d12;
+    --pink: #ed2f73;
+    --pink-dark: #b81753;
+    --pink-light: #f8c6d7;
+    --yellow: #fff0a9;
+
+    --text: #414737;
+    --muted: #707461;
+    --border: rgba(86, 140, 27, 0.18);
+    --shadow: 0 20px 50px rgba(80, 70, 30, 0.12);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background-color: var(--cream);
+    overflow-x: hidden;
+
+    /* Increased base readability */
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Checkerboard background */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    opacity: 0.45;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            rgba(255,255,255,.45) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            -45deg,
+            rgba(255,255,255,.45) 25%,
+            transparent 25%
+        );
+
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+    width: min(1180px, calc(100% - 50px));
+    margin: auto;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-main {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1;
+}
+
+.logo-star {
+    color: var(--pink);
+    font-size: 21px;
+    transform: translateY(-12px) rotate(-20deg);
+}
+
+.logo-sub {
+    position: absolute;
+    left: 4px;
+    bottom: -12px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    color: var(--pink-dark);
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.navbar a {
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: var(--pink);
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE MENU */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: none;
+
+    color: var(--green);
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.section {
+    width: min(1180px, calc(100% - 50px));
+    margin: auto;
+    padding: 100px 0;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: grid;
+    grid-template-columns: 1fr .9fr;
+
+    align-items: center;
+    gap: 60px;
+}
+
+.small-title {
+    color: var(--pink-dark);
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(65px, 7vw, 94px);
+    line-height: 0.85;
+    letter-spacing: -3px;
+
+    color: var(--green-dark);
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero-description {
+    max-width: 580px;
+
+    margin-top: 30px;
+
+    font-size: 18px;
+    line-height: 1.85;
+
+    color: var(--muted);
+}
+
+.hero-description strong {
+    color: var(--green-dark);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 16px 24px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border: 1.5px solid transparent;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(70,60,20,.15);
+}
+
+.primary {
+    background: var(--green);
+    color: white;
+}
+
+.secondary {
+    border-color: var(--pink);
+    color: var(--pink-dark);
+    background: rgba(255,255,255,.5);
+}
+
+.hero-note {
+    margin-top: 25px;
+
+    color: #92947e;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   HERO PHOTO
+===================================================== */
+
+.hero-image-area {
+    height: 590px;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.pink-circle {
+    position: absolute;
+
+    border: 22px solid var(--pink);
+
+    border-radius: 48% 52% 43% 57%;
+}
+
+.circle-one {
+    width: 490px;
+    height: 650px;
+
+    right: -80px;
+    top: -60px;
+
+    transform: rotate(-10deg);
+}
+
+.circle-two {
+    width: 520px;
+    height: 170px;
+
+    right: -60px;
+    bottom: 0;
+
+    transform: rotate(3deg);
+}
+
+.photo-frame {
+    width: 350px;
+    height: 410px;
+
+    background: var(--green);
+
+    padding: 14px;
+
+    border-radius: 27px;
+
+    position: relative;
+    z-index: 5;
+
+    transform: rotate(2deg);
+
+    box-shadow: var(--shadow);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    background: #d3d3ce;
+}
+
+.photo-decoration {
+    position: absolute;
+
+    z-index: 10;
+
+    color: var(--green);
+
+    font-size: 27px;
+}
+
+.photo-decoration.top {
+    top: 2px;
+    left: 7px;
+}
+
+.photo-decoration.bottom {
+    bottom: 4px;
+    right: 7px;
+}
+
+.photo-label {
+    position: absolute;
+
+    right: -25px;
+    bottom: 25px;
+
+    padding: 11px 16px;
+
+    background: var(--pink);
+    color: white;
+
+    border-radius: 17px 17px 17px 5px;
+}
+
+.photo-label strong {
+    display: block;
+
+    font-family: "Baloo 2";
+
+    font-size: 19px;
+    line-height: 1;
+}
+
+.photo-label small {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.cherry {
+    position: absolute;
+
+    color: var(--pink-dark);
+
+    font-size: 45px;
+
+    z-index: 10;
+}
+
+.cherry-one {
+    left: 25px;
+    bottom: 70px;
+}
+
+.cherry-two {
+    right: 20px;
+    top: 100px;
+
+    transform: scale(.65);
+}
+
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading > span,
+.section-label,
+.awards-intro > span,
+.contact-info > span {
+    color: var(--pink-dark);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.section-heading h2,
+.awards-intro h2,
+.contact-info h2 {
+    font-family: "Baloo 2";
+
+    font-size: clamp(48px, 5vw, 65px);
+    line-height: .9;
+
+    color: var(--green-dark);
+
+    margin-top: 11px;
+}
+
+.section-heading h2 em,
+.awards-intro h2 em,
+.contact-info h2 em {
+    color: var(--pink);
+    font-style: normal;
+}
+
+.section-heading p {
+    color: var(--muted);
+
+    max-width: 650px;
+
+    line-height: 1.8;
+
+    margin-top: 16px;
+
+    font-size: 17px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .95fr .7fr;
+
+    gap: 18px;
+}
+
+.about-card {
+    padding: 32px;
+
+    border-radius: 28px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255,253,241,.88);
+
+    box-shadow: 0 10px 30px rgba(80,70,30,.05);
+}
+
+.bio-card {
+    background: var(--green);
+    color: white;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(255,255,255,.15);
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+}
+
+.bio-card p {
+    font-size: 17px;
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+}
+
+.bio-card strong {
+    color: var(--yellow);
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: var(--pink-dark);
+}
+
+.education-card h3 {
+    font-family: "Baloo 2";
+
+    color: var(--green-dark);
+
+    font-size: 29px;
+
+    margin: 8px 0 22px;
+}
+
+.timeline {
+    display: grid;
+    gap: 18px;
+}
+
+.timeline-item {
+    border-left: 2px solid var(--pink-light);
+
+    padding-left: 15px;
+}
+
+.timeline-item span {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    color: var(--pink-dark);
+}
+
+.timeline-item strong {
+    display: block;
+
+    font-size: 15px;
+
+    margin-top: 4px;
+
+    line-height: 1.4;
+}
+
+.timeline-item p {
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+.facts-card {
+    background: #fff1b8;
+}
+
+.fact {
+    padding: 16px 0;
+
+    border-bottom: 1px dashed rgba(86,140,27,.25);
+}
+
+.fact:last-child {
+    border-bottom: none;
+}
+
+.fact small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fact strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.skill-card {
+    padding: 32px;
+
+    border-radius: 28px;
+
+    background: var(--cream-light);
+
+    border: 1px solid var(--border);
+}
+
+.pink-card {
+    background: #f8d5e1;
+}
+
+.green-card {
+    background: #e8f0d2;
+}
+
+.yellow-card {
+    background: #fff0b6;
+}
+
+.skill-number {
+    font-family: "Baloo 2";
+
+    color: var(--pink-dark);
+
+    font-size: 16px;
+}
+
+.skill-card h3 {
+    font-family: "Baloo 2";
+
+    color: var(--green-dark);
+
+    font-size: 31px;
+
+    margin: 3px 0 22px;
+}
+
+.skill-pills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.skill-pills span {
+    background: rgba(255,255,255,.65);
+
+    border-radius: 50px;
+
+    padding: 11px 16px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* SOFTWARE */
+
+.software-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.software-grid div {
+    min-height: 85px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 6px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.6);
+}
+
+.software-grid b {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: var(--green);
+
+    font-family: "Baloo 2";
+
+    font-size: 13px;
+}
+
+.software-grid span {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.soft-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.soft-skills span {
+    padding: 12px 16px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,.7);
+
+    color: var(--green-dark);
+
+    font-family: "Baloo 2";
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   PROJECT
+===================================================== */
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    border-radius: 40px;
+
+    background: var(--cream-light);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+
+    border-radius: 24px;
+
+    aspect-ratio: 1.45;
+
+    object-fit: cover;
+
+    background: #f0e5ba;
+}
+
+.project-badge {
+    position: absolute;
+
+    left: 18px;
+    bottom: 18px;
+
+    padding: 11px 15px;
+
+    border-radius: 50px;
+
+    background: var(--pink);
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.project-info {
+    padding: 10px;
+}
+
+.project-info h2 {
+    font-family: "Baloo 2";
+
+    font-size: clamp(42px, 4vw, 58px);
+
+    line-height: .9;
+
+    color: var(--green-dark);
+
+    margin: 11px 0 22px;
+}
+
+.project-info h2 em {
+    color: var(--pink);
+
+    font-style: normal;
+}
+
+.project-info p {
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 23px 0;
+}
+
+.technologies span {
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    background: #edf4dc;
+
+    color: var(--green-dark);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.project-bottom {
+    padding-top: 18px;
+
+    border-top: 1px dashed var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.status {
+    color: var(--green-dark);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.project-bottom a {
+    color: var(--pink-dark);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: var(--cream-light);
+
+    border: 1px solid var(--border);
+
+    transition: .25s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    aspect-ratio: 1.45;
+
+    object-fit: cover;
+
+    background: #f7edc6;
+}
+
+.gallery-caption {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 17px 18px;
+
+    font-family: "Baloo 2";
+
+    font-size: 19px;
+    font-weight: 700;
+
+    color: var(--green-dark);
+}
+
+.gallery-caption span {
+    color: var(--pink);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   AWARDS
+===================================================== */
+
+.awards-container {
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    gap: 55px;
+
+    padding: 48px;
+
+    border-radius: 40px;
+
+    background: var(--green);
+
+    color: white;
+}
+
+.awards-intro h2 {
+    color: white;
+}
+
+.awards-intro p {
+    color: rgba(255,255,255,.75);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-top: 18px;
+}
+
+.awards-list {
+    display: grid;
+
+    gap: 13px;
+}
+
+.award {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 19px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.1);
+
+    border: 1px solid rgba(255,255,255,.12);
+}
+
+.award-icon {
+    width: 47px;
+    height: 47px;
+
+    flex: 0 0 47px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: var(--yellow);
+
+    color: var(--pink-dark);
+
+    font-size: 19px;
+}
+
+.award small {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--yellow);
+}
+
+.award h3 {
+    font-family: "Baloo 2";
+
+    font-size: 22px;
+
+    line-height: 1.15;
+
+    margin-top: 4px;
+}
+
+.award p {
+    color: rgba(255,255,255,.68);
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: clamp(50px, 5vw, 70px);
+}
+
+.contact-info > p {
+    max-width: 500px;
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    line-height: 1.85;
+
+    font-size: 16px;
+}
+
+.contact-details {
+    display: grid;
+
+    gap: 15px;
+
+    margin-top: 28px;
+}
+
+.contact-details a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.contact-details a:hover {
+    color: var(--pink);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: #edf4dc;
+
+    color: var(--green);
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   SOCIAL CARD
+===================================================== */
+
+.social-card {
+    position: relative;
+
+    padding: 45px;
+
+    border-radius: 35px;
+
+    background: #f8d5e1;
+
+    overflow: hidden;
+}
+
+.social-decoration {
+    position: absolute;
+
+    right: 30px;
+    top: 20px;
+
+    color: var(--pink);
+
+    font-size: 45px;
+}
+
+.social-card > p {
+    color: var(--pink-dark);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.social-card h3 {
+    max-width: 450px;
+
+    font-family: "Baloo 2";
+
+    color: var(--green-dark);
+
+    font-size: 43px;
+
+    line-height: .95;
+
+    margin: 10px 0 30px;
+}
+
+.social-links {
+    display: grid;
+
+    gap: 9px;
+}
+
+.social-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.6);
+
+    color: var(--green-dark);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.social-link:hover {
+    background: white;
+
+    transform: translateX(5px);
+}
+
+.social-link b {
+    color: var(--pink);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #294f10;
+
+    color: white;
+
+    padding: 42px max(
+        25px,
+        calc((100vw - 1180px) / 2)
+    );
+}
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 30px;
+}
+
+.footer-logo .logo-main {
+    color: var(--yellow);
+}
+
+.footer-logo .logo-sub {
+    color: var(--pink-light);
+}
+
+.footer-top p {
+    margin-top: 10px;
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.13);
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .hero-image-area {
+        height: 500px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bio-card {
+        grid-row: span 2;
+    }
+
+    .facts-card {
+        grid-column: 2;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .awards-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    /* -------------------------------------------------
+       BASE MOBILE READABILITY
+    ------------------------------------------------- */
+
+    body {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+
+    /* -------------------------------------------------
+       HEADER
+    ------------------------------------------------- */
+
+    .site-header {
+        width: calc(100% - 28px);
+
+        min-height: 82px;
+    }
+
+    .logo-main {
+        font-size: 36px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        font-size: 32px;
+
+        padding: 6px;
+    }
+
+    .navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        padding: 12px;
+
+        border-radius: 20px;
+
+        background: rgba(255,253,241,.98);
+
+        border: 1px solid var(--border);
+
+        box-shadow: var(--shadow);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px 14px;
+
+        font-size: 17px;
+    }
+
+
+    /* -------------------------------------------------
+       SECTIONS
+    ------------------------------------------------- */
+
+    .section {
+        width: calc(100% - 28px);
+
+        padding: 75px 0;
+    }
+
+
+    /* -------------------------------------------------
+       HERO
+    ------------------------------------------------- */
+
+    .hero {
+        padding-top: 35px;
+
+        gap: 15px;
+    }
+
+    .small-title {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+
+    .hero h1 {
+        font-size: clamp(54px, 15vw, 76px);
+
+        letter-spacing: -2px;
+
+        line-height: .88;
+    }
+
+    .hero-description {
+        font-size: 17px;
+
+        line-height: 1.85;
+
+        margin-top: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 28px;
+    }
+
+    .button {
+        width: 100%;
+
+        padding: 17px 20px;
+
+        font-size: 16px;
+    }
+
+    .hero-note {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* -------------------------------------------------
+       HERO IMAGE
+    ------------------------------------------------- */
+
+    .hero-image-area {
+        height: 430px;
+    }
+
+    .photo-frame {
+        width: 275px;
+        height: 335px;
+    }
+
+    .circle-one {
+        width: 380px;
+        height: 500px;
+
+        border-width: 16px;
+
+        right: -60px;
+    }
+
+    .circle-two {
+        width: 400px;
+        height: 120px;
+
+        border-width: 14px;
+
+        right: -65px;
+    }
+
+
+    /* -------------------------------------------------
+       HEADINGS
+    ------------------------------------------------- */
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading > span,
+    .section-label,
+    .awards-intro > span,
+    .contact-info > span {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+        font-size: 48px;
+
+        line-height: .95;
+    }
+
+    .section-heading p {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+
+    /* -------------------------------------------------
+       ABOUT
+    ------------------------------------------------- */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-card {
+        grid-row: auto;
+    }
+
+    .facts-card {
+        grid-column: auto;
+    }
+
+    .about-card {
+        padding: 27px;
+
+        border-radius: 24px;
+    }
+
+    .bio-card p {
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
+
+    .education-card h3 {
+        font-size: 29px;
+    }
+
+    .timeline-item strong {
+        font-size: 16px;
+
+        line-height: 1.45;
+    }
+
+    .timeline-item span {
+        font-size: 11px;
+    }
+
+    .timeline-item p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .fact small {
+        font-size: 11px;
+    }
+
+    .fact strong {
+        font-size: 16px;
+
+        line-height: 1.45;
+    }
+
+
+    /* -------------------------------------------------
+       SKILLS
+    ------------------------------------------------- */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 27px;
+
+        border-radius: 24px;
+    }
+
+    .skill-number {
+        font-size: 17px;
+    }
+
+    .skill-card h3 {
+        font-size: 30px;
+    }
+
+    .skill-pills span {
+        font-size: 15px;
+
+        padding: 11px 14px;
+    }
+
+
+    /* SOFTWARE */
+
+    .software-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 9px;
+    }
+
+    .software-grid div {
+        min-height: 88px;
+    }
+
+    .software-grid span {
+        font-size: 11px;
+    }
+
+
+    /* SOFT SKILLS */
+
+    .soft-skills span {
+        font-size: 17px;
+
+        padding: 12px 14px;
+    }
+
+
+    /* -------------------------------------------------
+       PROJECT
+    ------------------------------------------------- */
+
+    .project-container {
+        padding: 14px;
+
+        border-radius: 28px;
+
+        gap: 15px;
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .project-info h2 {
+        font-size: 45px;
+
+        line-height: .95;
+    }
+
+    .project-info p {
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
+
+    .technologies {
+        gap: 8px;
+
+        margin: 23px 0;
+    }
+
+    .technologies span {
+        font-size: 11px;
+
+        padding: 9px 11px;
+    }
+
+    .project-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .status,
+    .project-bottom a {
+        font-size: 13px;
+    }
+
+
+    /* -------------------------------------------------
+       GALLERY
+    ------------------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-caption {
+        font-size: 20px;
+
+        padding: 17px 18px;
+    }
+
+    .gallery-caption span {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------------------------------
+       AWARDS
+    ------------------------------------------------- */
+
+    .awards-container {
+        padding: 30px 20px;
+
+        border-radius: 30px;
+    }
+
+    .awards-intro h2 {
+        font-size: 48px;
+    }
+
+    .awards-intro p {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+    .award {
+        padding: 17px;
+
+        align-items: flex-start;
+    }
+
+    .award h3 {
+        font-size: 22px;
+    }
+
+    .award p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .award small {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------------------------------
+       CONTACT
+    ------------------------------------------------- */
+
+    .contact-info h2 {
+        font-size: 51px;
+
+        line-height: .95;
+    }
+
+    .contact-info > p {
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
+
+    .contact-details {
+        gap: 17px;
+    }
+
+    .contact-details a {
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        align-items: flex-start;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+
+        flex: 0 0 42px;
+    }
+
+
+    /* -------------------------------------------------
+       SOCIAL CARD
+    ------------------------------------------------- */
+
+    .social-card {
+        padding: 30px 23px;
+
+        border-radius: 28px;
+    }
+
+    .social-card > p {
+        font-size: 12px;
+    }
+
+    .social-card h3 {
+        font-size: 40px;
+
+        line-height: .98;
+    }
+
+    .social-link {
+        padding: 17px 16px;
+
+        font-size: 16px;
+
+        min-height: 54px;
+    }
+
+
+    /* -------------------------------------------------
+       FOOTER
+    ------------------------------------------------- */
+
+    .footer {
+        padding: 38px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding-bottom: 25px;
+    }
+
+    .footer-top p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        gap: 8px;
+    }
+}
+
+
+/* =====================================================
+   EXTRA SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .site-header {
+        width: calc(100% - 22px);
+    }
+
+    .logo-main {
+        font-size: 32px;
+    }
+
+    .section {
+        width: calc(100% - 22px);
+
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image-area {
+        height: 390px;
+    }
+
+    .photo-frame {
+        width: 245px;
+        height: 300px;
+    }
+
+    .circle-one {
+        width: 330px;
+        height: 440px;
+
+        right: -55px;
+    }
+
+    .circle-two {
+        width: 350px;
+    }
+
+    .section-heading h2 {
+        font-size: 43px;
+    }
+
+    .about-card,
+    .skill-card {
+        padding: 23px;
+    }
+
+    .skill-pills span {
+        font-size: 14px;
+    }
+
+    .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-info h2 {
+        font-size: 41px;
+    }
+
+    .awards-intro h2 {
+        font-size: 43px;
+    }
+
+    .contact-info h2 {
+        font-size: 46px;
+    }
+
+    .social-card h3 {
+        font-size: 36px;
+    }
+}
