@@ -3,7 +3,6 @@
 ===================================================== */
 
 :root {
-
     --cream: #fff9dc;
     --cream-light: #fffdf1;
 
@@ -12,7 +11,6 @@
 
     --pink: #ed2f73;
     --pink-dark: #b81753;
-
     --pink-light: #f8c6d7;
 
     --yellow: #fff0a9;
@@ -22,8 +20,7 @@
 
     --border: rgba(86, 140, 27, 0.18);
 
-    --shadow:
-        0 20px 50px rgba(80, 70, 30, 0.12);
+    --shadow: 0 20px 50px rgba(80, 70, 30, 0.12);
 }
 
 
@@ -40,34 +37,30 @@
 html {
     scroll-behavior: smooth;
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background-color: var(--cream);
 
-    font-family:
-        "DM Sans",
-        sans-serif;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 
-    color:
-        var(--text);
+    overflow-x: hidden;
 
-    background-color:
-        var(--cream);
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-    overflow-x:
-        hidden;
-
-    width:
-        100%;
-
-    max-width:
-        100%;
-
-    font-size:
-        16px;
-
-    line-height:
-        1.6;
+main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
 }
 
 
@@ -76,11 +69,9 @@ body {
 ===================================================== */
 
 body::before {
-
     content: "";
 
     position: fixed;
-
     inset: 0;
 
     z-index: -10;
@@ -88,24 +79,20 @@ body::before {
     opacity: .45;
 
     background-image:
-
         linear-gradient(
             45deg,
             rgba(255,255,255,.45) 25%,
             transparent 25%
         ),
-
         linear-gradient(
             -45deg,
             rgba(255,255,255,.45) 25%,
             transparent 25%
         );
 
-    background-size:
-        60px 60px;
+    background-size: 60px 60px;
 
-    pointer-events:
-        none;
+    pointer-events: none;
 }
 
 
@@ -135,73 +122,46 @@ textarea {
 ===================================================== */
 
 .site-header {
+    width: min(1180px, calc(100% - 50px));
 
-    width:
-        min(
-            1180px,
-            calc(100% - 50px)
-        );
+    margin: 0 auto;
 
-    margin:
-        auto;
+    min-height: 90px;
 
-    min-height:
-        90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    display:
-        flex;
+    position: relative;
+    z-index: 100;
 
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    position:
-        relative;
-
-    z-index:
-        100;
+    min-width: 0;
 }
 
 .logo {
+    position: relative;
 
-    position:
-        relative;
+    display: inline-flex;
+    align-items: center;
 
-    display:
-        inline-flex;
-
-    align-items:
-        center;
+    flex-shrink: 0;
 }
 
 .logo-main {
+    font-family: "Baloo 2", sans-serif;
 
-    font-family:
-        "Baloo 2",
-        sans-serif;
+    font-size: 40px;
+    font-weight: 800;
 
-    font-size:
-        40px;
+    color: var(--green);
 
-    font-weight:
-        800;
-
-    color:
-        var(--green);
-
-    line-height:
-        1;
+    line-height: 1;
 }
 
 .logo-star {
+    color: var(--pink);
 
-    color:
-        var(--pink);
-
-    font-size:
-        21px;
+    font-size: 21px;
 
     transform:
         translateY(-12px)
@@ -209,27 +169,17 @@ textarea {
 }
 
 .logo-sub {
+    position: absolute;
 
-    position:
-        absolute;
+    left: 4px;
+    bottom: -12px;
 
-    left:
-        4px;
+    font-size: 9px;
+    font-weight: 800;
 
-    bottom:
-        -12px;
+    letter-spacing: 3px;
 
-    font-size:
-        9px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        3px;
-
-    color:
-        var(--pink-dark);
+    color: var(--pink-dark);
 }
 
 
@@ -238,36 +188,25 @@ textarea {
 ===================================================== */
 
 .navbar {
+    display: flex;
+    align-items: center;
 
-    display:
-        flex;
+    gap: 28px;
 
-    align-items:
-        center;
+    font-size: 15px;
+    font-weight: 700;
 
-    gap:
-        28px;
-
-    font-size:
-        15px;
-
-    font-weight:
-        700;
+    min-width: 0;
 }
 
 .navbar a {
-
-    transition:
-        .2s ease;
+    transition: .2s ease;
 }
 
 .navbar a:hover {
+    color: var(--pink);
 
-    color:
-        var(--pink);
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 
@@ -276,24 +215,16 @@ textarea {
 ===================================================== */
 
 .menu-toggle {
+    display: none;
 
-    display:
-        none;
+    border: none;
+    background: none;
 
-    border:
-        none;
+    color: var(--green);
 
-    background:
-        none;
+    font-size: 30px;
 
-    color:
-        var(--green);
-
-    font-size:
-        30px;
-
-    cursor:
-        pointer;
+    cursor: pointer;
 }
 
 
@@ -302,18 +233,13 @@ textarea {
 ===================================================== */
 
 .section {
+    width: min(1180px, calc(100% - 50px));
 
-    width:
-        min(
-            1180px,
-            calc(100% - 50px)
-        );
+    margin: 0 auto;
 
-    margin:
-        auto;
+    padding: 100px 0;
 
-    padding:
-        100px 0;
+    min-width: 0;
 }
 
 
@@ -322,90 +248,64 @@ textarea {
 ===================================================== */
 
 .hero {
+    min-height: 680px;
 
-    min-height:
-        680px;
+    display: grid;
 
-    display:
-        grid;
+    grid-template-columns: 1fr .9fr;
 
-    grid-template-columns:
-        1fr .9fr;
+    align-items: center;
 
-    align-items:
-        center;
+    gap: 60px;
 
-    gap:
-        60px;
+    min-width: 0;
+}
+
+.hero > * {
+    min-width: 0;
 }
 
 .small-title {
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
+    font-size: 13px;
+    font-weight: 800;
 
-    font-size:
-        13px;
+    letter-spacing: 2px;
 
-    font-weight:
-        800;
-
-    letter-spacing:
-        2px;
-
-    margin-bottom:
-        18px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
+    font-family: "Baloo 2", sans-serif;
 
-    font-family:
-        "Baloo 2",
-        sans-serif;
+    font-size: clamp(65px, 7vw, 94px);
 
-    font-size:
-        clamp(
-            65px,
-            7vw,
-            94px
-        );
+    line-height: .85;
 
-    line-height:
-        .85;
+    letter-spacing: -3px;
 
-    letter-spacing:
-        -3px;
-
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 }
 
 .hero h1 span {
-    color:
-        var(--pink);
+    color: var(--pink);
 }
 
 .hero-description {
+    max-width: 580px;
 
-    max-width:
-        580px;
+    margin-top: 30px;
 
-    margin-top:
-        30px;
+    font-size: 17px;
 
-    font-size:
-        17px;
+    line-height: 1.85;
 
-    line-height:
-        1.85;
-
-    color:
-        var(--muted);
+    color: var(--muted);
 }
 
 .hero-description strong {
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 }
 
 
@@ -414,60 +314,39 @@ textarea {
 ===================================================== */
 
 .hero-buttons {
+    display: flex;
 
-    display:
-        flex;
+    gap: 13px;
 
-    gap:
-        13px;
+    flex-wrap: wrap;
 
-    flex-wrap:
-        wrap;
-
-    margin-top:
-        30px;
+    margin-top: 30px;
 }
 
 .button {
+    display: inline-flex;
 
-    display:
-        inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    align-items:
-        center;
+    gap: 10px;
 
-    justify-content:
-        center;
+    padding: 15px 23px;
 
-    gap:
-        10px;
+    border-radius: 50px;
 
-    padding:
-        15px 23px;
+    font-size: 14px;
+    font-weight: 800;
 
-    border-radius:
-        50px;
+    border: 1.5px solid transparent;
 
-    font-size:
-        14px;
+    cursor: pointer;
 
-    font-weight:
-        800;
-
-    border:
-        1.5px solid transparent;
-
-    cursor:
-        pointer;
-
-    transition:
-        .25s ease;
+    transition: .25s ease;
 }
 
 .button:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 12px 25px
@@ -475,299 +354,197 @@ textarea {
 }
 
 .primary {
-
-    background:
-        var(--green);
-
-    color:
-        white;
+    background: var(--green);
+    color: white;
 }
 
 .secondary {
+    border-color: var(--pink);
 
-    border-color:
-        var(--pink);
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
-
-    background:
-        rgba(255,255,255,.5);
+    background: rgba(255,255,255,.5);
 }
 
 .hero-note {
+    margin-top: 25px;
 
-    margin-top:
-        25px;
+    color: #92947e;
 
-    color:
-        #92947e;
-
-    font-size:
-        13px;
+    font-size: 13px;
 }
 
 
 /* =====================================================
-   HERO PHOTO
+   HERO PHOTO AREA
 ===================================================== */
 
 .hero-image-area {
+    height: 590px;
 
-    height:
-        590px;
+    position: relative;
 
-    position:
-        relative;
+    display: grid;
+    place-items: center;
 
-    display:
-        grid;
+    width: 100%;
+    max-width: 100%;
 
-    place-items:
-        center;
+    min-width: 0;
 
     /*
        IMPORTANT:
-       Keeps the pink decorations inside this
-       image section so they cannot overlap
-       the text above it.
+       Decorations are clipped to this exact box.
+       They cannot visually escape into the text above.
     */
-    overflow:
-        hidden;
+    overflow: hidden;
 
-    width:
-        100%;
+    isolation: isolate;
 
-    max-width:
-        100%;
+    contain: paint;
 }
 
 .pink-circle {
+    position: absolute;
 
-    position:
-        absolute;
-
-    border:
-        22px solid var(--pink);
+    border: 22px solid var(--pink);
 
     border-radius:
         48% 52% 43% 57%;
 
-    pointer-events:
-        none;
+    pointer-events: none;
 
-    z-index:
-        1;
+    z-index: 1;
 }
 
 .circle-one {
+    width: 490px;
+    height: 650px;
 
-    width:
-        490px;
+    right: -80px;
+    top: -60px;
 
-    height:
-        650px;
-
-    right:
-        -80px;
-
-    top:
-        -60px;
-
-    transform:
-        rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 .circle-two {
+    width: 520px;
+    height: 170px;
 
-    width:
-        520px;
+    right: -60px;
+    bottom: 0;
 
-    height:
-        170px;
-
-    right:
-        -60px;
-
-    bottom:
-        0;
-
-    transform:
-        rotate(3deg);
+    transform: rotate(3deg);
 }
 
 .photo-frame {
+    width: 350px;
+    height: 410px;
 
-    width:
-        350px;
+    background: var(--green);
 
-    height:
-        410px;
+    padding: 14px;
 
-    background:
-        var(--green);
+    border-radius: 27px;
 
-    padding:
-        14px;
+    position: relative;
 
-    border-radius:
-        27px;
+    z-index: 5;
 
-    position:
-        relative;
+    transform: rotate(2deg);
 
-    z-index:
-        5;
+    box-shadow: var(--shadow);
 
-    transform:
-        rotate(2deg);
-
-    box-shadow:
-        var(--shadow);
-
-    flex-shrink:
-        0;
+    flex-shrink: 0;
 }
 
 .photo-frame img {
+    width: 100%;
+    height: 100%;
 
-    width:
-        100%;
+    object-fit: cover;
 
-    height:
-        100%;
+    border-radius: 18px;
 
-    object-fit:
-        cover;
-
-    border-radius:
-        18px;
-
-    background:
-        #d3d3ce;
+    background: #d3d3ce;
 }
 
 .photo-decoration {
+    position: absolute;
 
-    position:
-        absolute;
+    z-index: 10;
 
-    z-index:
-        10;
+    color: var(--green);
 
-    color:
-        var(--green);
-
-    font-size:
-        27px;
+    font-size: 27px;
 }
 
 .photo-decoration.top {
-
-    top:
-        2px;
-
-    left:
-        7px;
+    top: 2px;
+    left: 7px;
 }
 
 .photo-decoration.bottom {
-
-    bottom:
-        4px;
-
-    right:
-        7px;
+    bottom: 4px;
+    right: 7px;
 }
 
 .photo-label {
+    position: absolute;
 
-    position:
-        absolute;
+    right: -25px;
+    bottom: 25px;
 
-    right:
-        -25px;
+    padding: 11px 16px;
 
-    bottom:
-        25px;
+    background: var(--pink);
 
-    padding:
-        11px 16px;
-
-    background:
-        var(--pink);
-
-    color:
-        white;
+    color: white;
 
     border-radius:
         17px 17px 17px 5px;
 
-    z-index:
-        15;
+    z-index: 15;
 }
 
 .photo-label strong {
+    display: block;
 
-    display:
-        block;
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    font-size: 19px;
 
-    font-size:
-        19px;
-
-    line-height:
-        1;
+    line-height: 1;
 }
 
 .photo-label small {
+    font-size: 10px;
 
-    font-size:
-        10px;
-
-    letter-spacing:
-        1px;
+    letter-spacing: 1px;
 }
 
 .cherry {
+    position: absolute;
 
-    position:
-        absolute;
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
+    font-size: 45px;
 
-    font-size:
-        45px;
+    z-index: 10;
 
-    z-index:
-        10;
-
-    pointer-events:
-        none;
+    pointer-events: none;
 }
 
 .cherry-one {
-
-    left:
-        25px;
-
-    bottom:
-        70px;
+    left: 25px;
+    bottom: 70px;
 }
 
 .cherry-two {
+    right: 20px;
+    top: 100px;
 
-    right:
-        20px;
-
-    top:
-        100px;
-
-    transform:
-        scale(.65);
+    transform: scale(.65);
 }
 
 
@@ -776,94 +553,80 @@ textarea {
 ===================================================== */
 
 .section-heading {
-
-    margin-bottom:
-        45px;
+    margin-bottom: 45px;
 }
 
 .section-heading > span,
 .section-label,
 .awards-intro > span,
 .contact-info > span {
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
+    font-size: 12px;
+    font-weight: 800;
 
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        2.5px;
+    letter-spacing: 2.5px;
 }
 
 .section-heading h2,
 .awards-intro h2,
 .contact-info h2 {
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    font-size: clamp(48px, 5vw, 65px);
 
-    font-size:
-        clamp(
-            48px,
-            5vw,
-            65px
-        );
+    line-height: .9;
 
-    line-height:
-        .9;
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
-
-    margin-top:
-        11px;
+    margin-top: 11px;
 }
+
+
+/*
+   IMPORTANT COLOR FIX
+
+   Any highlighted/italic heading text that was
+   previously white is now PINK.
+*/
 
 .section-heading h2 em,
 .awards-intro h2 em,
 .contact-info h2 em {
+    color: var(--pink) !important;
 
-    color:
-        white;
-
-    font-style:
-        normal;
+    font-style: normal;
 }
 
+
+/* Prevent any heading emphasis from becoming white */
+
+.section-heading h2 em,
+.awards-intro h2 em,
+.contact-info h2 em {
+    text-shadow: none;
+}
+
+
 .section-heading p {
+    color: var(--muted);
 
-    color:
-        var(--muted);
+    max-width: 650px;
 
-    max-width:
-        650px;
+    line-height: 1.8;
 
-    line-height:
-        1.8;
+    margin-top: 16px;
 
-    margin-top:
-        16px;
-
-    font-size:
-        16px;
+    font-size: 16px;
 }
 
 .centered {
-    text-align:
-        center;
+    text-align: center;
 }
 
 .centered p {
-
-    margin-left:
-        auto;
-
-    margin-right:
-        auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -872,229 +635,162 @@ textarea {
 ===================================================== */
 
 .about-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         1.15fr .95fr .7fr;
 
-    gap:
-        18px;
+    gap: 18px;
+
+    min-width: 0;
 }
 
 .about-card {
+    padding: 32px;
 
-    padding:
-        32px;
+    border-radius: 28px;
 
-    border-radius:
-        28px;
+    border: 1px solid var(--border);
 
-    border:
-        1px solid var(--border);
-
-    background:
-        rgba(255,253,241,.88);
+    background: rgba(255,253,241,.88);
 
     box-shadow:
         0 10px 30px
         rgba(80,70,30,.05);
+
+    min-width: 0;
 }
 
 .bio-card {
+    background: var(--green);
 
-    background:
-        var(--green);
-
-    color:
-        white;
+    color: white;
 }
 
 .card-icon {
+    width: 48px;
+    height: 48px;
 
-    width:
-        48px;
+    border-radius: 50%;
 
-    height:
-        48px;
+    display: grid;
+    place-items: center;
 
-    border-radius:
-        50%;
+    background: rgba(255,255,255,.15);
 
-    display:
-        grid;
+    margin-bottom: 25px;
 
-    place-items:
-        center;
-
-    background:
-        rgba(255,255,255,.15);
-
-    margin-bottom:
-        25px;
-
-    font-size:
-        20px;
+    font-size: 20px;
 }
 
 .bio-card p {
+    font-size: 16px;
 
-    font-size:
-        16px;
+    line-height: 1.85;
 
-    line-height:
-        1.85;
-
-    margin-bottom:
-        18px;
+    margin-bottom: 18px;
 }
 
 .bio-card strong {
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 .card-title {
+    font-size: 11px;
+    font-weight: 800;
 
-    font-size:
-        11px;
+    letter-spacing: 2px;
 
-    font-weight:
-        800;
-
-    letter-spacing:
-        2px;
-
-    color:
-        var(--pink-dark);
+    color: var(--pink-dark);
 }
 
 .education-card h3 {
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
+    font-size: 28px;
 
-    font-size:
-        28px;
-
-    margin:
-        8px 0 22px;
+    margin: 8px 0 22px;
 }
 
 .timeline {
+    display: grid;
 
-    display:
-        grid;
-
-    gap:
-        18px;
+    gap: 18px;
 }
 
 .timeline-item {
-
     border-left:
         2px solid var(--pink-light);
 
-    padding-left:
-        15px;
+    padding-left: 15px;
+
+    min-width: 0;
 }
 
 .timeline-item span {
+    display: block;
 
-    display:
-        block;
+    font-size: 10px;
+    font-weight: 800;
 
-    font-size:
-        10px;
-
-    font-weight:
-        800;
-
-    color:
-        var(--pink-dark);
+    color: var(--pink-dark);
 }
 
 .timeline-item strong {
+    display: block;
 
-    display:
-        block;
+    font-size: 14px;
 
-    font-size:
-        14px;
+    margin-top: 4px;
 
-    margin-top:
-        4px;
-
-    line-height:
-        1.4;
+    line-height: 1.4;
 }
 
 .timeline-item p {
+    font-size: 12px;
 
-    font-size:
-        12px;
+    color: var(--muted);
 
-    color:
-        var(--muted);
-
-    margin-top:
-        3px;
+    margin-top: 3px;
 }
 
 .facts-card {
-    background:
-        #fff1b8;
+    background: #fff1b8;
 }
 
 .fact {
-
-    padding:
-        16px 0;
+    padding: 16px 0;
 
     border-bottom:
-        1px dashed rgba(86,140,27,.25);
+        1px dashed
+        rgba(86,140,27,.25);
 }
 
 .fact:last-child {
-    border-bottom:
-        none;
+    border-bottom: none;
 }
 
 .fact small {
+    display: block;
 
-    display:
-        block;
+    color: var(--muted);
 
-    color:
-        var(--muted);
-
-    font-size:
-        10px;
-
-    font-weight:
-        700;
+    font-size: 10px;
+    font-weight: 700;
 }
 
 .fact strong {
+    display: block;
 
-    display:
-        block;
+    margin-top: 4px;
 
-    margin-top:
-        4px;
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
+    font-size: 14px;
 
-    font-size:
-        14px;
-
-    line-height:
-        1.4;
+    line-height: 1.4;
 }
 
 
@@ -1103,102 +799,75 @@ textarea {
 ===================================================== */
 
 .skills-grid {
+    display: grid;
 
-    display:
-        grid;
+    grid-template-columns: 1fr 1fr;
 
-    grid-template-columns:
-        1fr 1fr;
+    gap: 18px;
 
-    gap:
-        18px;
+    min-width: 0;
 }
 
 .skill-card {
+    padding: 32px;
 
-    padding:
-        32px;
+    border-radius: 28px;
 
-    border-radius:
-        28px;
+    background: var(--cream-light);
 
-    background:
-        var(--cream-light);
+    border: 1px solid var(--border);
 
-    border:
-        1px solid var(--border);
+    min-width: 0;
 }
 
 .pink-card {
-    background:
-        #f8d5e1;
+    background: #f8d5e1;
 }
 
 .green-card {
-    background:
-        #e8f0d2;
+    background: #e8f0d2;
 }
 
 .yellow-card {
-    background:
-        #fff0b6;
+    background: #fff0b6;
 }
 
 .skill-number {
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
-
-    font-size:
-        15px;
+    font-size: 15px;
 }
 
 .skill-card h3 {
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
+    font-size: 30px;
 
-    font-size:
-        30px;
-
-    margin:
-        3px 0 22px;
+    margin: 3px 0 22px;
 }
 
 .skill-pills {
+    display: flex;
 
-    display:
-        flex;
+    flex-wrap: wrap;
 
-    flex-wrap:
-        wrap;
-
-    gap:
-        9px;
+    gap: 9px;
 }
 
 .skill-pills span {
-
     background:
         rgba(255,255,255,.65);
 
-    border-radius:
-        50px;
+    border-radius: 50px;
 
-    padding:
-        10px 15px;
+    padding: 10px 15px;
 
-    font-size:
-        13px;
-
-    font-weight:
-        700;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 
@@ -1207,117 +876,83 @@ textarea {
 ===================================================== */
 
 .software-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(4,1fr);
 
-    gap:
-        10px;
+    gap: 10px;
+
+    min-width: 0;
 }
 
 .software-grid div {
+    min-height: 80px;
 
-    min-height:
-        80px;
+    display: flex;
 
-    display:
-        flex;
+    flex-direction: column;
 
-    flex-direction:
-        column;
+    justify-content: center;
 
-    justify-content:
-        center;
+    align-items: center;
 
-    align-items:
-        center;
+    text-align: center;
 
-    text-align:
-        center;
+    gap: 6px;
 
-    gap:
-        6px;
-
-    border-radius:
-        15px;
+    border-radius: 15px;
 
     background:
         rgba(255,255,255,.6);
+
+    min-width: 0;
 }
 
 .software-grid b {
+    width: 35px;
+    height: 35px;
 
-    width:
-        35px;
+    display: grid;
+    place-items: center;
 
-    height:
-        35px;
+    border-radius: 9px;
 
-    display:
-        grid;
+    background: white;
 
-    place-items:
-        center;
+    color: var(--green);
 
-    border-radius:
-        9px;
+    font-family: "Baloo 2";
 
-    background:
-        white;
-
-    color:
-        var(--green);
-
-    font-family:
-        "Baloo 2";
-
-    font-size:
-        13px;
+    font-size: 13px;
 }
 
 .software-grid span {
-
-    font-size:
-        10px;
-
-    font-weight:
-        700;
+    font-size: 10px;
+    font-weight: 700;
 }
 
 .soft-skills {
+    display: flex;
 
-    display:
-        flex;
+    flex-wrap: wrap;
 
-    flex-wrap:
-        wrap;
-
-    gap:
-        10px;
+    gap: 10px;
 }
 
 .soft-skills span {
+    padding: 12px 15px;
 
-    padding:
-        12px 15px;
-
-    border-radius:
-        15px;
+    border-radius: 15px;
 
     background:
         rgba(255,255,255,.7);
 
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 
-    font-family:
-        "Baloo 2";
+    font-family: "Baloo 2";
 
-    font-size:
-        15px;
+    font-size: 15px;
 }
 
 
@@ -1326,215 +961,148 @@ textarea {
 ===================================================== */
 
 .project-container {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         1.1fr .9fr;
 
-    gap:
-        45px;
+    gap: 45px;
 
-    align-items:
-        center;
+    align-items: center;
 
-    padding:
-        25px;
+    padding: 25px;
 
-    border-radius:
-        40px;
+    border-radius: 40px;
 
-    background:
-        var(--cream-light);
+    background: var(--cream-light);
 
-    border:
-        1px solid var(--border);
+    border: 1px solid var(--border);
 
-    box-shadow:
-        var(--shadow);
+    box-shadow: var(--shadow);
+
+    min-width: 0;
 }
 
 .project-image {
-    position:
-        relative;
+    position: relative;
+
+    min-width: 0;
 }
 
 .project-image img {
+    width: 100%;
 
-    width:
-        100%;
+    border-radius: 24px;
 
-    border-radius:
-        24px;
+    aspect-ratio: 1.45;
 
-    aspect-ratio:
-        1.45;
+    object-fit: cover;
 
-    object-fit:
-        cover;
-
-    background:
-        #f0e5ba;
+    background: #f0e5ba;
 }
 
 .project-badge {
+    position: absolute;
 
-    position:
-        absolute;
+    left: 18px;
+    bottom: 18px;
 
-    left:
-        18px;
+    padding: 10px 14px;
 
-    bottom:
-        18px;
+    border-radius: 50px;
 
-    padding:
-        10px 14px;
+    background: var(--pink);
 
-    border-radius:
-        50px;
+    color: white;
 
-    background:
-        var(--pink);
+    font-size: 10px;
+    font-weight: 800;
 
-    color:
-        white;
-
-    font-size:
-        10px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        1px;
+    letter-spacing: 1px;
 }
 
 .project-info {
-    padding:
-        10px;
+    padding: 10px;
+
+    min-width: 0;
 }
 
 .project-info h2 {
-
-    font-family:
-        "Baloo 2";
+    font-family: "Baloo 2";
 
     font-size:
-        clamp(
-            42px,
-            4vw,
-            58px
-        );
+        clamp(42px, 4vw, 58px);
 
-    line-height:
-        .9;
+    line-height: .9;
 
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 
-    margin:
-        11px 0 22px;
+    margin: 11px 0 22px;
 }
 
 .project-info h2 em {
+    color: var(--pink);
 
-    color:
-        var(--pink);
-
-    font-style:
-        normal;
+    font-style: normal;
 }
 
 .project-info p {
+    color: var(--muted);
 
-    color:
-        var(--muted);
+    font-size: 15px;
 
-    font-size:
-        15px;
-
-    line-height:
-        1.85;
+    line-height: 1.85;
 }
 
 .technologies {
+    display: flex;
 
-    display:
-        flex;
+    flex-wrap: wrap;
 
-    flex-wrap:
-        wrap;
+    gap: 8px;
 
-    gap:
-        8px;
-
-    margin:
-        23px 0;
+    margin: 23px 0;
 }
 
 .technologies span {
+    padding: 8px 11px;
 
-    padding:
-        8px 11px;
+    border-radius: 8px;
 
-    border-radius:
-        8px;
+    background: #edf4dc;
 
-    background:
-        #edf4dc;
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
-
-    font-size:
-        10px;
-
-    font-weight:
-        800;
+    font-size: 10px;
+    font-weight: 800;
 }
 
 .project-bottom {
-
-    padding-top:
-        18px;
+    padding-top: 18px;
 
     border-top:
-        1px dashed var(--border);
+        1px dashed
+        var(--border);
 
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
-    gap:
-        15px;
+    gap: 15px;
 }
 
 .status {
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
-
-    font-size:
-        11px;
-
-    font-weight:
-        800;
+    font-size: 11px;
+    font-weight: 800;
 }
 
 .project-bottom a {
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 
@@ -1543,93 +1111,66 @@ textarea {
 ===================================================== */
 
 .gallery-grid {
+    display: grid;
 
-    display:
-        grid;
+    grid-template-columns: 1fr 1fr;
 
-    grid-template-columns:
-        1fr 1fr;
+    gap: 18px;
 
-    gap:
-        18px;
+    min-width: 0;
 }
 
 .gallery-item {
+    overflow: hidden;
 
-    overflow:
-        hidden;
+    border-radius: 25px;
 
-    border-radius:
-        25px;
+    background: var(--cream-light);
 
-    background:
-        var(--cream-light);
+    border: 1px solid var(--border);
 
-    border:
-        1px solid var(--border);
+    transition: .25s ease;
 
-    transition:
-        .25s ease;
+    min-width: 0;
 }
 
 .gallery-item:hover {
+    transform: translateY(-5px);
 
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 .gallery-item img {
+    width: 100%;
 
-    width:
-        100%;
+    aspect-ratio: 1.45;
 
-    aspect-ratio:
-        1.45;
+    object-fit: cover;
 
-    object-fit:
-        cover;
-
-    background:
-        #f7edc6;
+    background: #f7edc6;
 }
 
 .gallery-caption {
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    gap: 12px;
 
-    gap:
-        12px;
+    padding: 16px 18px;
 
-    padding:
-        16px 18px;
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    font-size: 18px;
+    font-weight: 700;
 
-    font-size:
-        18px;
-
-    font-weight:
-        700;
-
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 }
 
 .gallery-caption span {
+    color: var(--pink);
 
-    color:
-        var(--pink);
-
-    font-size:
-        11px;
+    font-size: 11px;
 }
 
 
@@ -1638,155 +1179,124 @@ textarea {
 ===================================================== */
 
 .awards-container {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         .75fr 1.25fr;
 
-    gap:
-        55px;
+    gap: 55px;
 
-    padding:
-        48px;
+    padding: 48px;
 
-    border-radius:
-        40px;
+    border-radius: 40px;
 
-    background:
-        var(--green);
+    background: var(--green);
 
-    color:
-        white;
+    color: white;
+
+    min-width: 0;
+}
+
+.awards-intro {
+    min-width: 0;
 }
 
 .awards-intro h2 {
-    color:
-        white;
+    color: var(--pink);
+}
+
+/* Ensures highlighted words are PINK */
+.awards-intro h2 em {
+    color: var(--pink) !important;
 }
 
 .awards-intro p {
-
     color:
         rgba(255,255,255,.75);
 
-    font-size:
-        15px;
+    font-size: 15px;
 
-    line-height:
-        1.8;
+    line-height: 1.8;
 
-    margin-top:
-        18px;
+    margin-top: 18px;
 }
 
 .awards-list {
+    display: grid;
 
-    display:
-        grid;
+    gap: 13px;
 
-    gap:
-        13px;
+    min-width: 0;
 }
 
 .award {
+    display: flex;
 
-    display:
-        flex;
+    align-items: flex-start;
 
-    align-items:
-        flex-start;
+    gap: 16px;
 
-    gap:
-        16px;
+    padding: 19px;
 
-    padding:
-        19px;
-
-    border-radius:
-        18px;
+    border-radius: 18px;
 
     background:
         rgba(255,255,255,.1);
 
     border:
-        1px solid rgba(255,255,255,.12);
+        1px solid
+        rgba(255,255,255,.12);
+
+    min-width: 0;
 }
 
 .award-icon {
+    width: 47px;
+    height: 47px;
 
-    width:
-        47px;
+    flex: 0 0 47px;
 
-    height:
-        47px;
+    display: grid;
 
-    flex:
-        0 0 47px;
+    place-items: center;
 
-    display:
-        grid;
+    border-radius: 13px;
 
-    place-items:
-        center;
+    background: var(--yellow);
 
-    border-radius:
-        13px;
+    color: var(--pink-dark);
 
-    background:
-        var(--yellow);
-
-    color:
-        var(--pink-dark);
-
-    font-size:
-        19px;
+    font-size: 19px;
 }
 
 .award small {
+    font-size: 10px;
+    font-weight: 800;
 
-    font-size:
-        10px;
+    letter-spacing: 2px;
 
-    font-weight:
-        800;
-
-    letter-spacing:
-        2px;
-
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 .award h3 {
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    font-size: 21px;
 
-    font-size:
-        21px;
+    line-height: 1.15;
 
-    line-height:
-        1.15;
-
-    margin-top:
-        4px;
+    margin-top: 4px;
 }
 
 .award p {
-
     color:
         rgba(255,255,255,.68);
 
-    font-size:
-        12px;
+    font-size: 12px;
 
-    margin-top:
-        5px;
+    margin-top: 5px;
 
-    line-height:
-        1.5;
+    line-height: 1.5;
 }
 
 
@@ -1795,118 +1305,89 @@ textarea {
 ===================================================== */
 
 .contact-grid {
-
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         .9fr 1.1fr;
 
-    gap:
-        65px;
+    gap: 65px;
 
-    align-items:
-        center;
+    align-items: center;
+
+    min-width: 0;
+}
+
+.contact-info {
+    min-width: 0;
 }
 
 .contact-info h2 {
-
     font-size:
-        clamp(
-            50px,
-            5vw,
-            70px
-        );
+        clamp(50px, 5vw, 70px);
+}
+
+.contact-info h2 em {
+    color: var(--pink) !important;
 }
 
 .contact-info > p {
+    max-width: 500px;
 
-    max-width:
-        500px;
+    margin-top: 22px;
 
-    margin-top:
-        22px;
+    color: var(--muted);
 
-    color:
-        var(--muted);
+    line-height: 1.85;
 
-    line-height:
-        1.85;
-
-    font-size:
-        15px;
+    font-size: 15px;
 }
 
 .contact-details {
+    display: grid;
 
-    display:
-        grid;
+    gap: 15px;
 
-    gap:
-        15px;
-
-    margin-top:
-        28px;
+    margin-top: 28px;
 }
 
 .contact-details a {
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    gap: 13px;
 
-    gap:
-        13px;
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
+    font-size: 14px;
+    font-weight: 700;
 
-    font-size:
-        14px;
+    transition: .2s ease;
 
-    font-weight:
-        700;
-
-    transition:
-        .2s ease;
+    min-width: 0;
 }
 
 .contact-details a:hover {
-
-    color:
-        var(--pink);
+    color: var(--pink);
 }
 
 .contact-icon {
+    width: 40px;
+    height: 40px;
 
-    width:
-        40px;
+    flex: 0 0 40px;
 
-    height:
-        40px;
+    display: grid;
 
-    flex:
-        0 0 40px;
+    place-items: center;
 
-    display:
-        grid;
+    border-radius: 12px;
 
-    place-items:
-        center;
+    background: #edf4dc;
 
-    border-radius:
-        12px;
+    color: var(--green);
 
-    background:
-        #edf4dc;
-
-    color:
-        var(--green);
-
-    font-weight:
-        800;
+    font-weight: 800;
 }
 
 
@@ -1915,131 +1396,89 @@ textarea {
 ===================================================== */
 
 .social-card {
+    position: relative;
 
-    position:
-        relative;
+    padding: 45px;
 
-    padding:
-        45px;
+    border-radius: 35px;
 
-    border-radius:
-        35px;
+    background: #f8d5e1;
 
-    background:
-        #f8d5e1;
+    overflow: hidden;
 
-    overflow:
-        hidden;
+    min-width: 0;
 }
 
 .social-decoration {
+    position: absolute;
 
-    position:
-        absolute;
+    right: 30px;
+    top: 20px;
 
-    right:
-        30px;
+    color: var(--pink);
 
-    top:
-        20px;
-
-    color:
-        var(--pink);
-
-    font-size:
-        45px;
+    font-size: 45px;
 }
 
 .social-card > p {
+    color: var(--pink-dark);
 
-    color:
-        var(--pink-dark);
+    font-size: 11px;
+    font-weight: 800;
 
-    font-size:
-        11px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        2px;
+    letter-spacing: 2px;
 }
 
 .social-card h3 {
+    max-width: 450px;
 
-    max-width:
-        450px;
+    font-family: "Baloo 2";
 
-    font-family:
-        "Baloo 2";
+    color: var(--green-dark);
 
-    color:
-        var(--green-dark);
+    font-size: 42px;
 
-    font-size:
-        42px;
+    line-height: .95;
 
-    line-height:
-        .95;
-
-    margin:
-        10px 0 30px;
+    margin: 10px 0 30px;
 }
 
 .social-links {
+    display: grid;
 
-    display:
-        grid;
-
-    gap:
-        9px;
+    gap: 9px;
 }
 
 .social-link {
+    display: flex;
 
-    display:
-        flex;
+    align-items: center;
 
-    align-items:
-        center;
+    justify-content: space-between;
 
-    justify-content:
-        space-between;
+    padding: 15px 18px;
 
-    padding:
-        15px 18px;
-
-    border-radius:
-        14px;
+    border-radius: 14px;
 
     background:
         rgba(255,255,255,.6);
 
-    color:
-        var(--green-dark);
+    color: var(--green-dark);
 
-    font-size:
-        14px;
+    font-size: 14px;
+    font-weight: 700;
 
-    font-weight:
-        700;
-
-    transition:
-        .2s ease;
+    transition: .2s ease;
 }
 
 .social-link:hover {
+    background: white;
 
-    background:
-        white;
-
-    transform:
-        translateX(5px);
+    transform: translateX(5px);
 }
 
 .social-link b {
-    color:
-        var(--pink);
+    color: var(--pink);
 }
 
 
@@ -2048,12 +1487,9 @@ textarea {
 ===================================================== */
 
 .footer {
+    background: #294f10;
 
-    background:
-        #294f10;
-
-    color:
-        white;
+    color: white;
 
     padding:
         42px max(
@@ -2063,68 +1499,51 @@ textarea {
 }
 
 .footer-top {
+    display: flex;
 
-    display:
-        flex;
+    justify-content: space-between;
 
-    justify-content:
-        space-between;
+    align-items: center;
 
-    align-items:
-        center;
+    gap: 30px;
 
-    gap:
-        30px;
-
-    padding-bottom:
-        30px;
+    padding-bottom: 30px;
 }
 
 .footer-logo .logo-main {
-    color:
-        var(--yellow);
+    color: var(--yellow);
 }
 
 .footer-logo .logo-sub {
-    color:
-        var(--pink-light);
+    color: var(--pink-light);
 }
 
 .footer-top p {
-
-    margin-top:
-        10px;
+    margin-top: 10px;
 
     color:
         rgba(255,255,255,.7);
 
-    font-size:
-        13px;
+    font-size: 13px;
 }
 
 .footer-bottom {
-
     border-top:
         1px solid
         rgba(255,255,255,.13);
 
-    padding-top:
-        20px;
+    padding-top: 20px;
 
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
-    gap:
-        20px;
+    gap: 20px;
 
     color:
         rgba(255,255,255,.65);
 
-    font-size:
-        11px;
+    font-size: 11px;
 }
 
 
@@ -2135,283 +1554,221 @@ textarea {
 @media (max-width: 950px) {
 
     .hero {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
+        gap: 30px;
 
-        gap:
-            30px;
-
-        text-align:
-            center;
+        text-align: center;
     }
 
     .hero-description {
-        margin-left:
-            auto;
-
-        margin-right:
-            auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
-        justify-content:
-            center;
+        justify-content: center;
     }
 
     .hero-note {
-        text-align:
-            center;
+        text-align: center;
     }
 
     .hero-image-area {
+        height: 500px;
 
-        height:
-            500px;
+        width: 100%;
 
-        width:
-            100%;
+        overflow: hidden;
 
-        overflow:
-            hidden;
+        contain: paint;
     }
 
     .about-grid {
-
         grid-template-columns:
             1fr 1fr;
     }
 
     .bio-card {
-
-        grid-row:
-            span 2;
+        grid-row: span 2;
     }
 
     .facts-card {
-
-        grid-column:
-            2;
+        grid-column: 2;
     }
 
     .project-container {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .awards-container {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
-
-        gap:
-            30px;
+        gap: 30px;
     }
 
     .contact-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
-
-        gap:
-            35px;
+        gap: 35px;
     }
 }
 
 
 /* =====================================================
-   MOBILE
+   MOBILE FIRST
 ===================================================== */
 
 @media (max-width: 700px) {
 
     html,
     body {
+        width: 100%;
+        max-width: 100%;
 
-        width:
-            100%;
-
-        max-width:
-            100%;
-
-        overflow-x:
-            hidden;
+        overflow-x: hidden;
     }
-
 
     body {
+        font-size: 17px;
+        line-height: 1.7;
+    }
 
-        font-size:
-            17px;
+    main {
+        width: 100%;
+        max-width: 100%;
 
-        line-height:
-            1.7;
+        overflow-x: hidden;
     }
 
 
-    /* ---------------- HEADER ---------------- */
+    /* =================================================
+       HEADER
+    ================================================= */
 
     .site-header {
+        width: calc(100% - 28px);
 
-        width:
-            calc(100% - 28px);
+        min-height: 82px;
 
-        min-height:
-            82px;
+        margin: 0 auto;
 
-        margin:
-            0 auto;
+        padding: 0;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
     }
-
 
     .logo-main {
-
-        font-size:
-            36px;
+        font-size: 36px;
     }
-
 
     .menu-toggle {
-
-        display:
-            block;
+        display: block;
     }
 
-
     .navbar {
+        display: none;
 
-        display:
-            none;
+        position: absolute;
 
-        position:
-            absolute;
+        top: 75px;
 
-        top:
-            75px;
+        left: 0;
+        right: 0;
 
-        left:
-            0;
+        flex-direction: column;
 
-        right:
-            0;
+        align-items: stretch;
 
-        flex-direction:
-            column;
+        gap: 3px;
 
-        align-items:
-            stretch;
+        padding: 12px;
 
-        gap:
-            3px;
-
-        padding:
-            12px;
-
-        border-radius:
-            20px;
+        border-radius: 20px;
 
         background:
             rgba(255,253,241,.98);
 
         border:
-            1px solid var(--border);
+            1px solid
+            var(--border);
 
-        box-shadow:
-            var(--shadow);
+        box-shadow: var(--shadow);
     }
-
 
     .navbar.active {
-
-        display:
-            flex;
+        display: flex;
     }
-
 
     .navbar a {
+        padding: 13px;
 
-        padding:
-            13px;
-
-        font-size:
-            16px;
+        font-size: 16px;
     }
 
 
-    /* ---------------- SECTIONS ---------------- */
+    /* =================================================
+       SECTIONS
+    ================================================= */
 
     .section {
+        width: calc(100% - 28px);
 
-        width:
-            calc(100% - 28px);
+        max-width: 100%;
 
-        max-width:
-            100%;
+        margin: 0 auto;
 
-        margin:
-            0 auto;
+        padding: 75px 0;
 
-        padding:
-            75px 0;
+        min-width: 0;
     }
 
 
-    /* ---------------- HERO ---------------- */
+    /* =================================================
+       HERO
+    ================================================= */
 
     .hero {
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        margin: 0 auto;
 
-        margin:
-            0 auto;
+        padding-top: 35px;
 
-        padding-top:
-            35px;
+        display: grid;
 
-        display:
-            grid;
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
+        gap: 25px;
 
-        gap:
-            25px;
+        text-align: center;
 
-        text-align:
-            center;
+        justify-items: center;
 
-        justify-items:
-            center;
+        min-width: 0;
     }
-
 
     .hero > * {
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .small-title {
+        font-size: 11px;
 
-        font-size:
-            11px;
-
-        line-height:
-            1.5;
+        line-height: 1.5;
     }
 
-
     .hero h1 {
-
         font-size:
             clamp(
                 54px,
@@ -2419,796 +1776,600 @@ textarea {
                 76px
             );
 
-        letter-spacing:
-            -2px;
+        letter-spacing: -2px;
 
-        text-align:
-            center;
+        text-align: center;
 
-        width:
-            100%;
+        width: 100%;
+
+        max-width: 100%;
     }
-
 
     .hero-description {
+        font-size: 17px;
 
-        font-size:
-            17px;
+        line-height: 1.85;
 
-        line-height:
-            1.85;
+        margin-left: auto;
+        margin-right: auto;
 
-        margin-left:
-            auto;
+        max-width: 100%;
 
-        margin-right:
-            auto;
-
-        max-width:
-            100%;
-
-        text-align:
-            center;
+        text-align: center;
     }
-
 
     .hero-buttons {
+        flex-direction: column;
 
-        flex-direction:
-            column;
+        align-items: center;
 
-        align-items:
-            center;
+        width: 100%;
 
-        width:
-            100%;
-
-        max-width:
-            100%;
+        max-width: 100%;
     }
-
 
     .button {
+        width: 100%;
 
-        width:
-            100%;
+        padding: 16px 20px;
 
-        padding:
-            16px 20px;
-
-        font-size:
-            15px;
+        font-size: 15px;
     }
 
-
     .hero-note {
+        font-size: 13px;
 
-        font-size:
-            13px;
+        text-align: center;
 
-        text-align:
-            center;
+        width: 100%;
     }
 
 
     /* =================================================
        MOBILE PHOTO AREA
        
-       This is the IMPORTANT FIX.
-       The pink circles are now contained inside
-       the image area and cannot overlap the text.
+       THE PINK DESIGN IS NOW FULLY CONTAINED HERE.
+       IT CANNOT OVERLAY THE TEXT ABOVE.
     ================================================= */
 
     .hero-image-area {
+        height: 470px;
 
-        height:
-            470px;
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        margin: 0 auto;
 
-        margin:
-            0 auto;
+        position: relative;
 
-        position:
-            relative;
+        display: flex;
 
-        display:
-            flex;
+        align-items: center;
 
-        align-items:
-            center;
+        justify-content: center;
 
-        justify-content:
-            center;
+        overflow: hidden;
 
-        overflow:
-            hidden;
+        isolation: isolate;
 
-        isolation:
-            isolate;
+        contain: paint;
+
+        clip-path: inset(0);
     }
 
-
     .photo-frame {
-
         width:
             min(
                 275px,
                 78vw
             );
 
-        height:
-            335px;
+        height: 335px;
 
-        max-width:
-            78vw;
+        max-width: 78vw;
 
-        padding:
-            12px;
+        padding: 12px;
 
-        border-radius:
-            25px;
+        border-radius: 25px;
 
-        position:
-            relative;
+        position: relative;
 
-        z-index:
-            5;
+        z-index: 5;
 
-        transform:
-            rotate(2deg);
+        transform: rotate(2deg);
+
+        flex-shrink: 0;
     }
-
 
     .photo-frame img {
+        width: 100%;
 
-        width:
-            100%;
+        height: 100%;
 
-        height:
-            100%;
+        object-fit: cover;
 
-        object-fit:
-            cover;
-
-        border-radius:
-            17px;
+        border-radius: 17px;
     }
 
 
-    /*
-       Pink vertical circle.
-       Smaller and centered on mobile.
-    */
+    /* =================================================
+       PINK VERTICAL CIRCLE
+    ================================================= */
 
     .circle-one {
+        width: 330px;
 
-        width:
-            330px;
+        height: 430px;
 
-        height:
-            430px;
+        border-width: 13px;
 
-        border-width:
-            13px;
+        right: auto;
 
-        right:
-            auto;
+        left: 50%;
 
-        left:
-            50%;
-
-        top:
-            50%;
+        top: 50%;
 
         transform:
             translate(-50%, -50%)
             rotate(-10deg);
 
-        z-index:
-            1;
+        z-index: 1;
+
+        pointer-events: none;
     }
 
 
-    /*
-       Pink horizontal circle.
-       Also centered and kept inside the
-       hero image area.
-    */
+    /* =================================================
+       PINK HORIZONTAL CIRCLE
+    ================================================= */
 
     .circle-two {
+        width: 350px;
 
-        width:
-            350px;
+        height: 105px;
 
-        height:
-            105px;
+        border-width: 11px;
 
-        border-width:
-            11px;
+        right: auto;
 
-        right:
-            auto;
+        left: 50%;
 
-        left:
-            50%;
-
-        bottom:
-            12px;
+        bottom: 12px;
 
         transform:
             translateX(-50%)
             rotate(3deg);
 
-        z-index:
-            1;
-    }
+        z-index: 1;
 
+        pointer-events: none;
+    }
 
     .photo-label {
+        right: -15px;
 
-        right:
-            -15px;
+        bottom: 22px;
 
-        bottom:
-            22px;
+        padding: 10px 14px;
 
-        padding:
-            10px 14px;
-
-        z-index:
-            15;
+        z-index: 15;
     }
-
 
     .photo-label strong {
-
-        font-size:
-            18px;
+        font-size: 18px;
     }
-
 
     .photo-label small {
-
-        font-size:
-            9px;
+        font-size: 9px;
     }
-
 
     .cherry-one {
+        left: 12px;
 
-        left:
-            12px;
+        bottom: 55px;
 
-        bottom:
-            55px;
-
-        font-size:
-            34px;
+        font-size: 34px;
     }
-
 
     .cherry-two {
+        right: 10px;
 
-        right:
-            10px;
+        top: 80px;
 
-        top:
-            80px;
-
-        font-size:
-            34px;
+        font-size: 34px;
     }
 
 
-    /* ---------------- HEADINGS ---------------- */
+    /* =================================================
+       HEADINGS
+    ================================================= */
 
     .section-heading {
+        margin-bottom: 35px;
 
-        margin-bottom:
-            35px;
+        text-align: center;
 
-        text-align:
-            center;
+        width: 100%;
     }
-
 
     .section-heading > span,
     .section-label,
     .awards-intro > span,
     .contact-info > span {
-
-        font-size:
-            11px;
+        font-size: 11px;
     }
-
 
     .section-heading h2 {
+        font-size: 48px;
 
-        font-size:
-            48px;
+        line-height: .95;
 
-        line-height:
-            .95;
+        width: 100%;
     }
 
+    /* PINK INSTEAD OF WHITE */
+    .section-heading h2 em {
+        color: var(--pink) !important;
+    }
 
     .section-heading p {
+        font-size: 16px;
 
-        font-size:
-            16px;
+        line-height: 1.8;
 
-        line-height:
-            1.8;
+        margin-left: auto;
+        margin-right: auto;
 
-        margin-left:
-            auto;
-
-        margin-right:
-            auto;
+        width: 100%;
     }
 
 
-    /* ---------------- ABOUT ---------------- */
+    /* =================================================
+       ABOUT
+    ================================================= */
 
     .about-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .bio-card {
-
-        grid-row:
-            auto;
+        grid-row: auto;
     }
-
 
     .facts-card {
-
-        grid-column:
-            auto;
+        grid-column: auto;
     }
-
 
     .about-card {
+        padding: 27px;
 
-        padding:
-            27px;
+        border-radius: 24px;
 
-        border-radius:
-            24px;
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .bio-card p {
+        font-size: 17px;
 
-        font-size:
-            17px;
-
-        line-height:
-            1.85;
+        line-height: 1.85;
     }
-
 
     .education-card h3 {
-
-        font-size:
-            29px;
+        font-size: 29px;
     }
-
 
     .timeline-item strong {
+        font-size: 15px;
 
-        font-size:
-            15px;
-
-        line-height:
-            1.45;
+        line-height: 1.45;
     }
-
 
     .timeline-item span {
-
-        font-size:
-            10px;
+        font-size: 10px;
     }
-
 
     .timeline-item p {
-
-        font-size:
-            13px;
+        font-size: 13px;
     }
-
 
     .fact strong {
-
-        font-size:
-            15px;
+        font-size: 15px;
     }
 
 
-    /* ---------------- SKILLS ---------------- */
+    /* =================================================
+       SKILLS
+    ================================================= */
 
     .skills-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
+        width: 100%;
+
+        min-width: 0;
     }
-
 
     .skill-card {
+        padding: 27px;
 
-        padding:
-            27px;
+        width: 100%;
 
-        width:
-            100%;
+        min-width: 0;
     }
-
 
     .skill-card h3 {
-
-        font-size:
-            30px;
+        font-size: 30px;
     }
-
 
     .skill-pills span {
+        font-size: 14px;
 
-        font-size:
-            14px;
-
-        padding:
-            10px 14px;
+        padding: 10px 14px;
     }
-
 
     .software-grid {
-
         grid-template-columns:
             repeat(3, 1fr);
-    }
 
+        width: 100%;
+    }
 
     .software-grid span {
-
-        font-size:
-            10px;
+        font-size: 10px;
     }
-
 
     .soft-skills span {
+        font-size: 16px;
 
-        font-size:
-            16px;
-
-        padding:
-            11px 14px;
+        padding: 11px 14px;
     }
 
 
-    /* ---------------- PROJECT ---------------- */
+    /* =================================================
+       PROJECT
+    ================================================= */
 
     .project-container {
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        padding: 14px;
 
-        padding:
-            14px;
+        border-radius: 28px;
 
-        border-radius:
-            28px;
+        overflow: hidden;
 
-        overflow:
-            hidden;
+        min-width: 0;
     }
-
 
     .project-info {
+        padding: 10px;
 
-        padding:
-            10px;
+        min-width: 0;
     }
-
 
     .project-info h2 {
+        font-size: 45px;
 
-        font-size:
-            45px;
-
-        line-height:
-            .95;
+        line-height: .95;
     }
-
 
     .project-info p {
+        font-size: 16px;
 
-        font-size:
-            16px;
-
-        line-height:
-            1.85;
+        line-height: 1.85;
     }
-
 
     .technologies span {
+        font-size: 10px;
 
-        font-size:
-            10px;
-
-        padding:
-            9px 11px;
+        padding: 9px 11px;
     }
-
 
     .project-bottom {
+        flex-direction: column;
 
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
+        align-items: flex-start;
     }
-
 
     .status,
     .project-bottom a {
-
-        font-size:
-            12px;
+        font-size: 12px;
     }
 
 
-    /* ---------------- GALLERY ---------------- */
+    /* =================================================
+       GALLERY
+    ================================================= */
 
     .gallery-grid {
+        grid-template-columns: 1fr;
 
-        grid-template-columns:
-            1fr;
+        width: 100%;
 
-        width:
-            100%;
+        min-width: 0;
     }
-
 
     .gallery-item {
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .gallery-caption {
-
-        font-size:
-            19px;
+        font-size: 19px;
     }
 
 
-    /* ---------------- AWARDS ---------------- */
+    /* =================================================
+       AWARDS
+    ================================================= */
 
     .awards-container {
+        padding: 30px 20px;
 
-        padding:
-            30px 20px;
+        border-radius: 30px;
 
-        border-radius:
-            30px;
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .awards-intro h2 {
-
-        font-size:
-            48px;
+        font-size: 48px;
     }
 
+    /* PINK INSTEAD OF WHITE */
+    .awards-intro h2 em {
+        color: var(--pink) !important;
+    }
 
     .awards-intro p {
-
-        font-size:
-            16px;
+        font-size: 16px;
     }
-
 
     .award {
+        padding: 17px;
 
-        padding:
-            17px;
+        align-items: flex-start;
 
-        align-items:
-            flex-start;
+        min-width: 0;
     }
-
 
     .award h3 {
-
-        font-size:
-            21px;
+        font-size: 21px;
     }
-
 
     .award p {
+        font-size: 13px;
 
-        font-size:
-            13px;
-
-        line-height:
-            1.6;
+        line-height: 1.6;
     }
 
 
-    /* ---------------- CONTACT ---------------- */
+    /* =================================================
+       CONTACT
+    ================================================= */
 
     .contact-info {
+        text-align: center;
 
-        text-align:
-            center;
+        width: 100%;
+
+        min-width: 0;
     }
-
 
     .contact-info h2 {
+        font-size: 51px;
 
-        font-size:
-            51px;
+        width: 100%;
     }
 
+    /* PINK INSTEAD OF WHITE */
+    .contact-info h2 em {
+        color: var(--pink) !important;
+    }
 
     .contact-info > p {
+        font-size: 16px;
 
-        font-size:
-            16px;
+        line-height: 1.85;
 
-        line-height:
-            1.85;
+        margin-left: auto;
+        margin-right: auto;
 
-        margin-left:
-            auto;
-
-        margin-right:
-            auto;
+        width: 100%;
     }
-
 
     .contact-details {
+        width: 100%;
 
-        width:
-            100%;
-
-        text-align:
-            left;
+        text-align: left;
     }
-
 
     .contact-details a {
+        font-size: 15px;
 
-        font-size:
-            15px;
+        line-height: 1.5;
 
-        line-height:
-            1.5;
+        min-width: 0;
     }
-
 
     .social-card {
+        padding: 30px 23px;
 
-        padding:
-            30px 23px;
+        border-radius: 28px;
 
-        border-radius:
-            28px;
+        width: 100%;
 
-        width:
-            100%;
+        max-width: 100%;
 
-        max-width:
-            100%;
+        min-width: 0;
     }
-
 
     .social-card h3 {
-
-        font-size:
-            40px;
+        font-size: 40px;
     }
-
 
     .social-link {
+        padding: 16px;
 
-        padding:
-            16px;
-
-        font-size:
-            15px;
+        font-size: 15px;
     }
 
 
-    /* ---------------- FOOTER ---------------- */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     .footer {
+        padding: 38px 20px;
 
-        padding:
-            38px 20px;
+        width: 100%;
 
-        width:
-            100%;
-
-        max-width:
-            100%;
+        max-width: 100%;
     }
-
 
     .footer-top {
+        flex-direction: column;
 
-        flex-direction:
-            column;
+        align-items: center;
 
-        align-items:
-            center;
+        text-align: center;
 
-        text-align:
-            center;
-
-        padding-bottom:
-            25px;
+        padding-bottom: 25px;
     }
-
 
     .footer-top p {
-
-        font-size:
-            13px;
+        font-size: 13px;
     }
 
-
     .footer-bottom {
+        flex-direction: column;
 
-        flex-direction:
-            column;
+        align-items: center;
 
-        align-items:
-            center;
+        text-align: center;
 
-        text-align:
-            center;
+        font-size: 11px;
 
-        font-size:
-            11px;
-
-        line-height:
-            1.6;
+        line-height: 1.6;
     }
 }
 
@@ -3220,103 +2381,72 @@ textarea {
 @media (max-width: 380px) {
 
     .site-header {
-        width:
-            calc(100% - 22px);
+        width: calc(100% - 22px);
     }
-
 
     .section {
-        width:
-            calc(100% - 22px);
+        width: calc(100% - 22px);
     }
-
 
     .logo-main {
-        font-size:
-            32px;
+        font-size: 32px;
     }
-
 
     .hero h1 {
-
-        font-size:
-            52px;
+        font-size: 52px;
     }
-
 
     .hero-description {
-
-        font-size:
-            16px;
+        font-size: 16px;
     }
-
 
     .hero-image-area {
+        height: 440px;
 
-        height:
-            440px;
+        width: 100%;
+
+        overflow: hidden;
+
+        contain: paint;
+
+        clip-path: inset(0);
     }
-
 
     .photo-frame {
+        width: 250px;
 
-        width:
-            250px;
+        max-width: 72vw;
 
-        max-width:
-            72vw;
-
-        height:
-            305px;
+        height: 305px;
     }
-
 
     .circle-one {
+        width: 300px;
 
-        width:
-            300px;
+        height: 395px;
 
-        height:
-            395px;
-
-        border-width:
-            12px;
+        border-width: 12px;
     }
-
 
     .circle-two {
+        width: 315px;
 
-        width:
-            315px;
+        height: 95px;
 
-        height:
-            95px;
-
-        border-width:
-            10px;
+        border-width: 10px;
     }
-
 
     .photo-label {
+        right: -10px;
 
-        right:
-            -10px;
-
-        bottom:
-            20px;
+        bottom: 20px;
     }
-
 
     .section-heading h2 {
-
-        font-size:
-            43px;
+        font-size: 43px;
     }
 
-
     .contact-info h2 {
-
-        font-size:
-            45px;
+        font-size: 45px;
     }
 }
